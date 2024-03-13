@@ -111,6 +111,7 @@ type Client struct {
 	ops          *ops             // ops provides a reference to server ops.
 	sync.RWMutex                  // mutex
 	InheritWay   int              // session inheritance way
+	ServerAttrs  sync.Map         // server custom attributes
 }
 
 // ClientConnection contains the connection transport and metadata for the client.
